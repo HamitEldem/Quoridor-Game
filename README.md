@@ -1,6 +1,9 @@
 # Quoridor-Game
 This game with C implements the Quoridor game using OpenGL and GLUT, with a graphical interface for two-player gameplay with player movement and wall placement.
 
+## Gameplay
+[https://youtu.be/PtIzH6qgA-M?si=rXYjLH16R-tXsJ6I
+](https://youtu.be/PtIzH6qgA-M?si=rXYjLH16R-tXsJ6I)
 ## Controls:
 **Movement**  : Arrow keys
 

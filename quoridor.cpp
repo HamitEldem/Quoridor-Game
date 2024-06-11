@@ -1,10 +1,4 @@
-//
-//  main.cpp
-//  quoridorGLUT
-//
-//  Created by Efe Eldem on
-//
-#define GL_SILENCE_DEPRECATION // for Macos --- Windows&GNU/Linux users can delete this line
+#define GL_SILENCE_DEPRECATION
 #include <GLUT/glut.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -391,7 +385,6 @@ void onKeyDown(unsigned char key, int x, int y) {
         if (key == 'W' || key == 'w'){
             if(p[pTurn].state == 0 && p[pTurn].remaining > 0){
                 p[pTurn].state = 1;
-                p[pTurn].remaining -= 1;
             }
         }
         if(key == 'H' || key == 'h'){
@@ -418,6 +411,7 @@ void onKeyDown(unsigned char key, int x, int y) {
                 else{
                     if(pos[gridM][key - '0'].inputDone == 1){
                         if(pos[gridM][key - '0'].wallState != wallFlag){
+                            p[pTurn].remaining -= 1;
                             // using a backup!
                             pos[gridM][key - '0'].sec.flag = 1;
                             pos[gridM][key - '0'].sec.state = wallFlag;
@@ -430,6 +424,7 @@ void onKeyDown(unsigned char key, int x, int y) {
                         }
                     }
                     else{
+                        p[pTurn].remaining -= 1;
                         gridN = key - '0';
                         pos[gridM][gridN].inputDone = 1;
                         pos[gridM][gridN].wallState = wallFlag;
@@ -585,6 +580,8 @@ void onSpecialKeyDown(int key, int x, int y) {
                 gameOver = true;
                 winner = 1;
             }
+        
+            
             
             if(inputValid){
                 p[pTurn].state = 0;

@@ -482,7 +482,6 @@ int findWallX(int x){
 // Special Key like GLUT_KEY_F1, F2, F3,...
 // Arrow Keys, GLUT_KEY_UP, GLUT_KEY_DOWN, GLUT_KEY_RIGHT, GLUT_KEY_RIGHT
 void onSpecialKeyDown(int key, int x, int y) {
-    // Write your codes here.
 
     if(!gameOver){
             switch (key) {
